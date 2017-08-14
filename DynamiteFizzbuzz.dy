@@ -1,0 +1,14 @@
+filter(x) = condition {
+    if { x divisible 15
+        'FizzBuzz' }
+    if { x divisible 3
+        'Fizz' }
+    if { x divisible 5
+        'Buzz' }
+    if { true
+        x }
+}
+
+each { x range(1 100)
+    out:filter:x
+}
